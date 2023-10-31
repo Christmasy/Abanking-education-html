@@ -12,6 +12,7 @@ body {
     --text-white: white;
     --bg-light-blue: rgba(237, 247, 250, 1);
     --btn-bg: rgba(255, 100, 100, 1);
+    --hover-btn-bg: rgba(255, 70, 70, 1);
     --year-dark-blue: rgba(20, 40, 80, 1);
     --link-blue:rgba(0, 168, 204, 1);
 }
@@ -47,6 +48,10 @@ ul {
 
 .menu li {
     margin-right: 33px;
+    transition: opacity 0.3s ease;
+    &:hover {
+        opacity: 0.6;
+    }
 }
 
 .menu li:last-child {
@@ -93,12 +98,13 @@ ul {
     height: 47px;
     border: none;
     line-height: 0px;
+    transition: background-color 0.3s ease;
+    &:hover {
+       background: var(--hover-btn-bg);
+    }
 }
 
 .avatar {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     padding-right: calc(149px - 60px);
 }
 
@@ -194,7 +200,6 @@ ul {
 }
 
 .featured .list {
-    //min-height: 710px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 31px;
